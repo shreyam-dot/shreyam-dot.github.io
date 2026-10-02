@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Shreya Mahajan: Head of Content, social media and video production lead in Dubai."><title>Shreya Mahajan</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="description" content="Shreya Mahajan: Head of Content, award-winning AI filmmaker, social media and video production lead in Dubai."><title>Shreya Mahajan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -113,6 +113,28 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
 .pill{font-size:14px;padding:6px 12px;border-radius:999px;background:var(--soft);color:var(--ink)}
 @media (max-width:860px){.about-grid{grid-template-columns:1fr}}
 
+/* Awards */
+.awards{display:grid;grid-template-columns:1fr 1.4fr;gap:32px;align-items:center;margin-top:40px;padding:32px;border-radius:18px;background:var(--ink);color:var(--bg)}
+.awards>*{min-width:0}
+.aw-intro h2{font-size:clamp(30px,3.6vw,44px);font-weight:800;margin-top:10px}
+.aw-intro p:last-child{margin-top:10px;opacity:.85}
+.aw-intro a{color:var(--sun)}
+.laurels{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.laurel{position:relative;text-align:center;padding:18px 26px;display:grid;gap:4px;align-content:center;min-height:110px}
+.laurel::before,.laurel::after{content:"";position:absolute;top:10px;bottom:10px;width:16px;border:2px solid var(--sun);border-radius:50%;opacity:.9}
+.laurel::before{left:0;border-right-color:transparent}
+.laurel::after{right:0;border-left-color:transparent}
+.laurel b{font-family:var(--display);font-size:18px;line-height:1.15}
+.laurel span{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+:root[data-theme="dark"] .awards{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .awards{background:var(--surface);color:var(--ink);border:1px solid var(--line)}}
+@media (max-width:860px){.awards{grid-template-columns:1fr}}
+@media (max-width:520px){.laurels{grid-template-columns:1fr}}
+.svc.ai{grid-column:1/-1;background:var(--soft);border-color:color-mix(in srgb,var(--accent) 35%,var(--line))}
+.svc.ai .tag{color:var(--accent)}
+.svc.ai ul{grid-template-columns:1fr 1fr}
+@media (max-width:640px){.svc.ai ul{grid-template-columns:1fr}}
+
 /* Services */
 .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .svc{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;gap:14px;align-content:start;min-width:0}
@@ -220,11 +242,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <p class="eyebrow">Head of Content · Dubai, UAE</p>
+          <p class="eyebrow">Head of Content · Award-winning AI filmmaker · Dubai</p>
           <h1 style="margin-top:18px">I make brands <em>worth watching.</em></h1>
-          <p class="lede">Ten-plus years building social-first content for entertainment, tech, events and lifestyle brands. Serious about strategy, unserious enough to make people stop scrolling.</p>
+          <p class="lede">Ten-plus years building social-first content for entertainment, tech, events and lifestyle brands, now with AI filmmaking at the core of how I produce. Serious about strategy, unserious enough to make people stop scrolling.</p>
           <div class="role" aria-label="Specialties">
-            <span>Content Strategy</span><span>Social Media</span><span>Video Production</span><span>Influencer Marketing</span>
+            <span>Content Strategy</span><span>Social Media</span><span>Video Production</span><span>Influencer Marketing</span><span>AI Filmmaking</span>
           </div>
         </div>
         <div class="viewfinder">
@@ -241,6 +263,19 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         <div class="stat"><b>60K+</b><span>organic followers in 5 months as Head of Content</span></div>
         <div class="stat"><b>200K+</b><span>AED influencer budget managed in a year</span></div>
         <div class="stat"><b>50M+</b><span>follower ecosystem operated within</span></div>
+
+      </div>
+      <div class="awards" id="awards">
+        <div class="aw-intro">
+          <p class="eyebrow">Award-winning AI short</p>
+          <h2>The Influencer Index</h2>
+          <p>My AI short film. <a href="#motion">Watch the trailer ↓</a></p>
+        </div>
+        <ul class="laurels">
+          <li class="laurel"><b>2× Award winner</b><span>SIAFF</span></li>
+          <li class="laurel"><b>Award winner</b><span>NY Short Film Monthly</span></li>
+          <li class="laurel"><b>Official Selection</b><span>Berlin Sci-Fi Filmfest</span></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -254,9 +289,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="copy">
         <p>I'm a senior content and social media lead who owns the whole function: strategy, production and delivery.</p>
         <p>I started in broadcast at Channel [V] India, producing 10+ reality shows. I spent nine years as a freelance video producer for brands like Wipro and Harley Davidson, led content for Nas Summit inside the Nas Daily ecosystem, and ran influencer and content at MobiMatter.</p>
+        <p>AI is my specialty and my main creative tool for films and content. My AI short <em>The Influencer Index</em> has won awards at SIAFF and NY Short Film Monthly and was selected for the Berlin Sci-Fi Filmfest.</p>
         <p>Today I run Sugar Habibti Films, a Dubai studio building social-first storytelling for premium brands and founders. I lead teams, brief creators, read the analytics, and still know my way around an edit timeline.</p>
         <div class="pills">
-          <span class="pill">Teams of 8+</span><span class="pill">Scrum Fundamentals Certified</span><span class="pill">Meta Certified</span><span class="pill">Mass Comm, University of Delhi</span>
+          <span class="pill">Award-winning AI filmmaker</span><span class="pill">Teams of 8+</span><span class="pill">Scrum Fundamentals Certified</span><span class="pill">Meta Certified</span><span class="pill">Mass Comm, University of Delhi</span>
         </div>
       </div>
     </div>
@@ -270,6 +306,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         <p>Available for full-time leadership roles, fractional Head of Content work and project-based production.</p>
       </div>
       <div class="svc-grid">
+        <article class="svc ai">
+          <span class="tag">AI · MY SPECIALTY</span>
+          <h3>AI filmmaking &amp; AI-powered content</h3>
+          <p>Award-winning AI films, ads and branded content, plus AI workflows that help content teams ship more without losing quality.</p>
+          <ul><li>AI short films, trailers and brand ads</li><li>AI video, image, voice and script generation</li><li>AI production pipelines for social content at scale</li><li>Training teams to use AI tools well</li></ul>
+        </article>
         <article class="svc">
           <span class="tag">STRATEGY</span>
           <h3>Content &amp; social strategy</h3>
@@ -341,6 +383,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
           <h3>Broadcast formats, scripts and storylines</h3>
           <p>Oversaw content development, casting, location shoots and post for national TV.</p>
         </article>
+        <article class="case feature">
+          <span class="client">Sugar Habibti Films · AI short film</span>
+          <div class="num">3<small>festival honours</small></div>
+          <h3>The Influencer Index</h3>
+          <p>2× award winner at SIAFF, award winner at NY Short Film Monthly, and an official selection at the Berlin Sci-Fi Filmfest.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -349,15 +397,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">In motion</p>
-        <h2>Reels, ads and AI films</h2>
+        <h2>AI films, reels and ads</h2>
         <p>A few recent pieces from Sugar Habibti Films. Tap to play.</p>
       </div>
       <div class="vid-grid">
-        <figure class="vid feature"><video controls playsinline preload="none" poster="https://static.wixstatic.com/media/2935c7_3ebd83fc85114f81991d7de36b871ddaf000.jpg"><source src="https://video.wixstatic.com/video/2935c7_3ebd83fc85114f81991d7de36b871dda/720p/mp4/file.mp4" type="video/mp4"><source src="https://video.wixstatic.com/video/2935c7_3ebd83fc85114f81991d7de36b871dda/480p/mp4/file.mp4" type="video/mp4"></video><figcaption><b>Studio showreel</b><span>Sugar Habibti Films</span></figcaption></figure>
+        <figure class="vid feature"><video controls playsinline preload="none" poster="https://static.wixstatic.com/media/2935c7_9e07d357b06d4ed3b7434108527588a4f000.jpg"><source src="https://video.wixstatic.com/video/2935c7_9e07d357b06d4ed3b7434108527588a4/720p/mp4/file.mp4" type="video/mp4"><source src="https://video.wixstatic.com/video/2935c7_9e07d357b06d4ed3b7434108527588a4/480p/mp4/file.mp4" type="video/mp4"></video><figcaption><b>The Influencer Index</b><span>Award-winning AI film · trailer</span></figcaption></figure>
+        <figure class="vid"><video controls playsinline preload="none" poster="https://static.wixstatic.com/media/2935c7_3ebd83fc85114f81991d7de36b871ddaf000.jpg"><source src="https://video.wixstatic.com/video/2935c7_3ebd83fc85114f81991d7de36b871dda/720p/mp4/file.mp4" type="video/mp4"><source src="https://video.wixstatic.com/video/2935c7_3ebd83fc85114f81991d7de36b871dda/480p/mp4/file.mp4" type="video/mp4"></video><figcaption><b>Studio showreel</b><span>Sugar Habibti Films</span></figcaption></figure>
         <figure class="vid"><video controls playsinline preload="none" poster="https://static.wixstatic.com/media/2935c7_ac2876f9e37e447fb2b2f3b11883cf27f000.jpg"><source src="https://video.wixstatic.com/video/2935c7_ac2876f9e37e447fb2b2f3b11883cf27/720p/mp4/file.mp4" type="video/mp4"><source src="https://video.wixstatic.com/video/2935c7_ac2876f9e37e447fb2b2f3b11883cf27/480p/mp4/file.mp4" type="video/mp4"></video><figcaption><b>40-second YouTube ad</b><span>Brand ad</span></figcaption></figure>
         <figure class="vid"><video controls playsinline preload="none" poster="https://static.wixstatic.com/media/2935c7_4844fd19dd114695af1f9366bd563ca5f000.jpg"><source src="https://video.wixstatic.com/video/2935c7_4844fd19dd114695af1f9366bd563ca5/720p/mp4/file.mp4" type="video/mp4"><source src="https://video.wixstatic.com/video/2935c7_4844fd19dd114695af1f9366bd563ca5/480p/mp4/file.mp4" type="video/mp4"></video><figcaption><b>MobiMatter</b><span>Reel</span></figcaption></figure>
         <figure class="vid"><video controls playsinline preload="none" poster="https://static.wixstatic.com/media/2935c7_a930fd1941db4b3bb23332dbe8a8ccd1f000.jpg"><source src="https://video.wixstatic.com/video/2935c7_a930fd1941db4b3bb23332dbe8a8ccd1/720p/mp4/file.mp4" type="video/mp4"><source src="https://video.wixstatic.com/video/2935c7_a930fd1941db4b3bb23332dbe8a8ccd1/480p/mp4/file.mp4" type="video/mp4"></video><figcaption><b>Solaya</b><span>Reel</span></figcaption></figure>
-        <figure class="vid"><video controls playsinline preload="none" poster="https://static.wixstatic.com/media/2935c7_9e07d357b06d4ed3b7434108527588a4f000.jpg"><source src="https://video.wixstatic.com/video/2935c7_9e07d357b06d4ed3b7434108527588a4/720p/mp4/file.mp4" type="video/mp4"><source src="https://video.wixstatic.com/video/2935c7_9e07d357b06d4ed3b7434108527588a4/480p/mp4/file.mp4" type="video/mp4"></video><figcaption><b>The Influencer Index</b><span>AI trailer</span></figcaption></figure>
         <figure class="vid"><video controls playsinline preload="none" poster="https://static.wixstatic.com/media/2935c7_638dc9cc17ba44599e12484e68c83466f000.jpg"><source src="https://video.wixstatic.com/video/2935c7_638dc9cc17ba44599e12484e68c83466/720p/mp4/file.mp4" type="video/mp4"><source src="https://video.wixstatic.com/video/2935c7_638dc9cc17ba44599e12484e68c83466/480p/mp4/file.mp4" type="video/mp4"></video><figcaption><b>AI video</b><span>English version</span></figcaption></figure>
       </div>
       <p class="more-links"><a class="btn" href="https://www.sugarhabibtifilms.com/blank" target="_blank" rel="noopener">See all work on sugarhabibtifilms.com ↗</a><a class="btn" href="https://www.instagram.com/sugarhabibtistudio/" target="_blank" rel="noopener">Instagram ↗</a></p>
@@ -414,7 +462,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="extras">
         <div class="extra"><h3>Education</h3><p>BA, Mass Communication &amp; Journalism, University of Delhi</p></div>
         <div class="extra"><h3>Certifications</h3><ul><li>Scrum Fundamentals Certified (SFC)</li><li>Meta Certified: Facebook &amp; Instagram Advertising</li><li>Digital Marketing Certification</li><li>Video Production Professional</li></ul></div>
-        <div class="extra"><h3>Toolkit</h3><p>Adobe Premiere · CapCut · Canva · Meta Business Suite · Later · Hootsuite · Notion · Google Analytics · Claude · Higgsfield AI</p></div>
+        <div class="extra"><h3>Toolkit</h3><p>Adobe Premiere · CapCut · Canva · Meta Business Suite · Later · Hootsuite · Notion · Google Analytics</p><p style="margin-top:8px"><b>AI:</b> Higgsfield AI · Claude</p></div>
       </div>
     </div>
   </section>
